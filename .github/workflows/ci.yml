@@ -16,3 +16,18 @@ jobs:
 
       - name: Run a simple check
         run: python -c "from app import greet, farewell; print(greet('CI')); print(farewell('CI'))"
+  
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Deploy (simulated)
+        run: |
+          echo "Running deployment steps..."
+          echo "Deploying app.py to production..."
+          echo "Deployment complete!"
