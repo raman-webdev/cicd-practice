@@ -8,3 +8,7 @@ def farewell(name):
 
 def welcome(name):
     return f'Welcome, {name}!'
+
+
+def warning(name):
+    return f'Warning to {name}.'
