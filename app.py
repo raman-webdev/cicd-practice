@@ -15,4 +15,8 @@ def warning(name):
     return f'Warning to {name}.'
 
 
+print(farewell("GPT"))
+
+print(welcome("man"))
+
 
